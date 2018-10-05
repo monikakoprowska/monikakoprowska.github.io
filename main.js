@@ -145,7 +145,7 @@ async function loadDict() {
     //if (mode == 'ar')
         //loc = 'model/class_names_ar.txt'
     //else
-        loc = 'model/class_names.txt'
+    loc = 'model/class_names.txt'
 
     await $.ajax({
         url: loc,
