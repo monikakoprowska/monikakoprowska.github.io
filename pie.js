@@ -14,6 +14,7 @@ function addSlice(sliceSize, pieElement, offset, sliceID, color) {
   });
 }
 function iterateSlices(sliceSize, pieElement, offset, dataCount, sliceCount, color) {
+  debugger
   var sliceID = "s"+dataCount+"-"+sliceCount;
   var maxSize = 179;
   if(sliceSize<=maxSize) {
@@ -34,7 +35,7 @@ function createPie(dataElement, pieElement) {
   }
   var offset = 0;
   var color = [
-    "orange",
+    "yellow",
     "gray"
   ];
   for(var i=0; i<listData.length; i++) {
