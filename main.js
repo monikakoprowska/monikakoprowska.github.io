@@ -116,7 +116,7 @@ function getFrame() {
 
         //get the prediction
         const pred = model.predict(preprocess(imgData)).dataSync()
-        //debugger
+        debugger
 
         //find the top 2 predictions
         const indices = findIndicesOfMax(pred, 2)
