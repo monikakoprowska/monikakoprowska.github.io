@@ -14,7 +14,7 @@ function addSlice(sliceSize, pieElement, offset, sliceID, color) {
   });
 }
 function iterateSlices(sliceSize, pieElement, offset, dataCount, sliceCount, color) {
-  debugger
+  //debugger
   var sliceID = "s"+dataCount+"-"+sliceCount;
   var maxSize = 179;
   if(sliceSize<=maxSize) {
