@@ -30,7 +30,7 @@ function createPie(dataElement, pieElement) {
     listData.push(Number($(this).html()));
   });
   var listTotal = 0;
-  for(var i=0; i<2; i++) {
+  for(var i=0; i<listData.length; i++) {
     listTotal += listData[i];
   }
   var offset = 0;
