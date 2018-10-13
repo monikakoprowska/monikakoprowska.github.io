@@ -17,7 +17,7 @@ $(function() {
     canvas.backgroundColor = '#ffffff';
     canvas.isDrawingMode = 0;
     canvas.freeDrawingBrush.color = "black";
-    canvas.freeDrawingBrush.width = 10;
+    canvas.freeDrawingBrush.width = 10; //width of Brush
     canvas.renderAll();
     //setup listeners
     canvas.on('mouse:up', function(e) {
@@ -28,7 +28,7 @@ $(function() {
         mousePressed = true
     });
     canvas.on('mouse:move', function(e) {
-        recordCoor(e)
+        recordCoor(e) //during mou
     });
 })
 
@@ -100,7 +100,7 @@ function getImageData() {
         //get image data according to dpi
         const dpi = window.devicePixelRatio
         const imgData = canvas.contextContainer.getImageData(mbb.min.x * dpi, mbb.min.y * dpi,
-                                                      (mbb.max.x - mbb.min.x) * dpi, (mbb.max.y - mbb.min.y) * dpi);
+                                                      (mbb.max.x - mbb.min.x) * dpi, (mbb.max.y - mbb.min.y) * dpi);// our picture info.
         return imgData
     }
 
@@ -116,7 +116,7 @@ function getFrame() {
 
         //get the prediction
         const pred = model.predict(preprocess(imgData)).dataSync()
-        debugger
+        //debugger
 
         //find the top 2 predictions
         const indices = findIndicesOfMax(pred, 2)
@@ -199,7 +199,7 @@ preprocess the data
 */
 function preprocess(imgData) {
     return tf.tidy(() => {
-        //convert to a tensor
+        //convert to a tensor from picture
         let tensor = tf.fromPixels(imgData, numChannels = 1)
 
         //resize
